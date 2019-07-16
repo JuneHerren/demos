@@ -1,6 +1,0 @@
-/Users/mbp/demos/cmake-demo/build/CMakeFiles/rebuild_cache.dir
-/Users/mbp/demos/cmake-demo/build/CMakeFiles/edit_cache.dir
-/Users/mbp/demos/cmake-demo/build/CMakeFiles/HELLO.dir
-/Users/mbp/demos/cmake-demo/build/src/CMakeFiles/rebuild_cache.dir
-/Users/mbp/demos/cmake-demo/build/src/CMakeFiles/edit_cache.dir
-/Users/mbp/demos/cmake-demo/build/src/CMakeFiles/DEMO.dir
