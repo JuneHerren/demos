@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mbp/demos/cmake-demo/build/CMakeFiles /Users/mbp/demos/cmake-demo/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /Users/mbp/demos/cmake-demo/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/mbp/demos/cmake-demo/build/CMakeFiles /Users/mbp/demos/cmake-demo/build/src/CMakeFiles/progress.marks
+	cd /Users/mbp/demos/cmake-demo/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mbp/demos/cmake-demo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /Users/mbp/demos/cmake-demo/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,71 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/mbp/demos/cmake-demo/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/mbp/demos/cmake-demo/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/mbp/demos/cmake-demo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named HELLO
+# Convenience name for target.
+src/CMakeFiles/DEMO.dir/rule:
+	cd /Users/mbp/demos/cmake-demo/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/DEMO.dir/rule
+.PHONY : src/CMakeFiles/DEMO.dir/rule
 
-# Build rule for target.
-HELLO: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 HELLO
-.PHONY : HELLO
+# Convenience name for target.
+DEMO: src/CMakeFiles/DEMO.dir/rule
 
-# fast build rule for target.
-HELLO/fast:
-	$(MAKE) -f CMakeFiles/HELLO.dir/build.make CMakeFiles/HELLO.dir/build
-.PHONY : HELLO/fast
-
-#=============================================================================
-# Target rules for targets named DEMO
-
-# Build rule for target.
-DEMO: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 DEMO
 .PHONY : DEMO
 
 # fast build rule for target.
 DEMO/fast:
-	$(MAKE) -f src/CMakeFiles/DEMO.dir/build.make src/CMakeFiles/DEMO.dir/build
+	cd /Users/mbp/demos/cmake-demo/build && $(MAKE) -f src/CMakeFiles/DEMO.dir/build.make src/CMakeFiles/DEMO.dir/build
 .PHONY : DEMO/fast
 
-main.o: main.cpp.o
+demo.o: demo.cpp.o
 
-.PHONY : main.o
+.PHONY : demo.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/HELLO.dir/build.make CMakeFiles/HELLO.dir/main.cpp.o
-.PHONY : main.cpp.o
+demo.cpp.o:
+	cd /Users/mbp/demos/cmake-demo/build && $(MAKE) -f src/CMakeFiles/DEMO.dir/build.make src/CMakeFiles/DEMO.dir/demo.cpp.o
+.PHONY : demo.cpp.o
 
-main.i: main.cpp.i
+demo.i: demo.cpp.i
 
-.PHONY : main.i
+.PHONY : demo.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/HELLO.dir/build.make CMakeFiles/HELLO.dir/main.cpp.i
-.PHONY : main.cpp.i
+demo.cpp.i:
+	cd /Users/mbp/demos/cmake-demo/build && $(MAKE) -f src/CMakeFiles/DEMO.dir/build.make src/CMakeFiles/DEMO.dir/demo.cpp.i
+.PHONY : demo.cpp.i
 
-main.s: main.cpp.s
+demo.s: demo.cpp.s
 
-.PHONY : main.s
+.PHONY : demo.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/HELLO.dir/build.make CMakeFiles/HELLO.dir/main.cpp.s
-.PHONY : main.cpp.s
+demo.cpp.s:
+	cd /Users/mbp/demos/cmake-demo/build && $(MAKE) -f src/CMakeFiles/DEMO.dir/build.make src/CMakeFiles/DEMO.dir/demo.cpp.s
+.PHONY : demo.cpp.s
 
 # Help Target
 help:
@@ -171,11 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... HELLO"
 	@echo "... DEMO"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... demo.o"
+	@echo "... demo.i"
+	@echo "... demo.s"
 .PHONY : help
 
 
@@ -187,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/mbp/demos/cmake-demo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

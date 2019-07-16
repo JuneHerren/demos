@@ -1,4 +1,4 @@
-#include"demo.hpp"
+#include"src/demo.hpp"
 #include<iostream>
 
 using namespace std;
@@ -13,7 +13,7 @@ using namespace std;
      cin >> target;
      Solution solution;
      auto it = solution.twoSum(vec,target);
-     for(auto c: it) cout << c;
+     for(auto c: it) cout << c << " ";
      cout << endl;
      return 0;
  }

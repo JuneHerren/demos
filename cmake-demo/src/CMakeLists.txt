@@ -1,7 +1,3 @@
-#cmake最低版本需求，不加入此行会受到警告信息
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-PROJECT(HELLO) #项目名称
-
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -Wall -Wextra -Wno-sign-compare -Wno-unused-but-set-variable -Wno-array-bounds")
 	# set(EXTRA_CXX_FLAGS -Weffc++ -Wswitch-default -Wfloat-equal -Wconversion -Wsign-conversion)
@@ -20,10 +16,5 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 	endif()
 endif()
 
-message(STATUS "The cmake_cxx_flags is: ${CMAKE_CXX_FLAGS}")
-ADD_SUBDIRECTORY( src )
-#把当前目录(.)下所有源代码文件和头文件加入变量SRC_LIST
-AUX_SOURCE_DIRECTORY(. SRC_LIST)
-#生成应用程序 hello (在windows下会自动生成hello.exe)
-ADD_EXECUTABLE(HELLO ${SRC_LIST})
-TARGET_LINK_LIBRARIES( HELLO DEMO )
+AUX_SOURCE_DIRECTORY(. DIR_TEST1_SRCS)
+ADD_LIBRARY ( DEMO ${DIR_TEST1_SRCS})

@@ -59,45 +59,100 @@ RM = /usr/local/Cellar/cmake/3.14.5/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mbp/cmake-demo
+CMAKE_SOURCE_DIR = /Users/mbp/demos/cmake-demo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mbp/cmake-demo/build
+CMAKE_BINARY_DIR = /Users/mbp/demos/cmake-demo/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/hello.dir
+# Target rules for target CMakeFiles/HELLO.dir
 
 # All Build rule for target.
-CMakeFiles/hello.dir/all:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/depend
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mbp/cmake-demo/build/CMakeFiles --progress-num=1,2,3 "Built target hello"
-.PHONY : CMakeFiles/hello.dir/all
+CMakeFiles/HELLO.dir/all: src/CMakeFiles/DEMO.dir/all
+	$(MAKE) -f CMakeFiles/HELLO.dir/build.make CMakeFiles/HELLO.dir/depend
+	$(MAKE) -f CMakeFiles/HELLO.dir/build.make CMakeFiles/HELLO.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mbp/demos/cmake-demo/build/CMakeFiles --progress-num=3,4 "Built target HELLO"
+.PHONY : CMakeFiles/HELLO.dir/all
 
 # Include target in all.
-all: CMakeFiles/hello.dir/all
+all: CMakeFiles/HELLO.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/hello.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mbp/cmake-demo/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/hello.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mbp/cmake-demo/build/CMakeFiles 0
-.PHONY : CMakeFiles/hello.dir/rule
+CMakeFiles/HELLO.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mbp/demos/cmake-demo/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/HELLO.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mbp/demos/cmake-demo/build/CMakeFiles 0
+.PHONY : CMakeFiles/HELLO.dir/rule
 
 # Convenience name for target.
-hello: CMakeFiles/hello.dir/rule
+HELLO: CMakeFiles/HELLO.dir/rule
 
-.PHONY : hello
-
-# clean rule for target.
-CMakeFiles/hello.dir/clean:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/clean
-.PHONY : CMakeFiles/hello.dir/clean
+.PHONY : HELLO
 
 # clean rule for target.
-clean: CMakeFiles/hello.dir/clean
+CMakeFiles/HELLO.dir/clean:
+	$(MAKE) -f CMakeFiles/HELLO.dir/build.make CMakeFiles/HELLO.dir/clean
+.PHONY : CMakeFiles/HELLO.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/HELLO.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src
+
+# Convenience name for "all" pass in the directory.
+src/all: src/CMakeFiles/DEMO.dir/all
+
+.PHONY : src/all
+
+# Convenience name for "clean" pass in the directory.
+src/clean: src/CMakeFiles/DEMO.dir/clean
+
+.PHONY : src/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/preinstall:
+
+.PHONY : src/preinstall
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/DEMO.dir
+
+# All Build rule for target.
+src/CMakeFiles/DEMO.dir/all:
+	$(MAKE) -f src/CMakeFiles/DEMO.dir/build.make src/CMakeFiles/DEMO.dir/depend
+	$(MAKE) -f src/CMakeFiles/DEMO.dir/build.make src/CMakeFiles/DEMO.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mbp/demos/cmake-demo/build/CMakeFiles --progress-num=1,2 "Built target DEMO"
+.PHONY : src/CMakeFiles/DEMO.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/DEMO.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/DEMO.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mbp/demos/cmake-demo/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/DEMO.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mbp/demos/cmake-demo/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/DEMO.dir/rule
+
+# Convenience name for target.
+DEMO: src/CMakeFiles/DEMO.dir/rule
+
+.PHONY : DEMO
+
+# clean rule for target.
+src/CMakeFiles/DEMO.dir/clean:
+	$(MAKE) -f src/CMakeFiles/DEMO.dir/build.make src/CMakeFiles/DEMO.dir/clean
+.PHONY : src/CMakeFiles/DEMO.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/DEMO.dir/clean
 
 .PHONY : clean
 
