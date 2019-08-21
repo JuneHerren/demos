@@ -1,5 +1,4 @@
-"""split 自定义字符串的切割方式
-""""
+//split 自定义字符串的切割方式
 template<typename T>
 vector<T> split(const string& str, char delim){
 	stringstream  stream(str);
