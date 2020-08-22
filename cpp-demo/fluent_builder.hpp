@@ -2,8 +2,8 @@
 //  users.hpp
 //  Tom
 //
-//  Created by JunqingYang on 2020/8/21.
-//  Copyright © 2020 JunqingYang. All rights reserved.
+//  Created by JunHerrenYang on 2020/8/21.
+//  Copyright © 2020 JunHerrenYang. All rights reserved.
 //
 #include<iostream>
 #ifndef users_hpp
