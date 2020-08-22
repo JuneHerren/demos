@@ -1,13 +1,13 @@
 //
-//  users.h
+//  users.hpp
 //  Tom
 //
 //  Created by JunqingYang on 2020/8/21.
 //  Copyright © 2020 JunqingYang. All rights reserved.
 //
 #include<iostream>
-#ifndef users_h
-#define users_h
+#ifndef users_hpp
+#define users_hpp
 
 class User {
     
@@ -81,6 +81,7 @@ private:
 
 
  
-// auto it = User::UserBuilder("JunHerren","Yang").age(20).phone("123456789").address("亚特兰蒂斯大陆").build();
+// auto it = User::UserBuilder("Junqing","Yang").age(20).phone("123456789").address("亚特兰蒂斯大陆").build();
+// it.getInfo();
 
-#endif /* users_h */
+#endif /* users_hpp */
