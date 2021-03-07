@@ -8,6 +8,7 @@
   live_db_port =""
   live_db_name =""
   test_db ="mysql"
+  test_db_host =""
   test_db_user =""
   test_db_password =""
   test_db_port =""
